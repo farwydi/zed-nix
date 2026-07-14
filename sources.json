@@ -1,0 +1,9 @@
+{
+  "version": "1.10.3",
+  "systems": {
+    "x86_64-linux": {
+      "target": "x86_64",
+      "hash": "sha256-Vete+LIRyVCpAJ2jC39gPSydLICyB/nelP+rbTHVj4w="
+    }
+  }
+}
