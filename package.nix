@@ -5,6 +5,7 @@
   autoPatchelfHook,
   makeWrapper,
   alsa-lib,
+  libxkbcommon,
   wayland,
   vulkan-loader,
   libglvnd,
@@ -36,6 +37,7 @@ stdenv.mkDerivation {
 
   buildInputs = [
     alsa-lib
+    libxkbcommon
     (lib.getLib stdenv.cc.cc) # libgcc_s
   ];
 
@@ -55,6 +57,9 @@ stdenv.mkDerivation {
     runHook preInstall
     mkdir -p $out
     cp -r bin libexec lib share $out/
+    # бандловый libxkbcommon ищет раскладки в /usr/share/X11/xkb — на NixOS его нет,
+    # zed падает на старте; никсовый знает путь к xkeyboard-config
+    rm $out/lib/libxkbcommon*.so*
     runHook postInstall
   '';
 
