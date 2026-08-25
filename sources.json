@@ -1,9 +1,9 @@
 {
-  "version": "1.16.1",
+  "version": "1.16.2",
   "systems": {
     "x86_64-linux": {
       "target": "x86_64",
-      "hash": "sha256-nmEa3QxA6GsVA3JFii17eNEBxUkk3HvKjbJ84g2XxmE="
+      "hash": "sha256-x2GsueUpd5JMajahAiTPtymF5r71wenixvJOl0ixBqc="
     }
   }
 }
